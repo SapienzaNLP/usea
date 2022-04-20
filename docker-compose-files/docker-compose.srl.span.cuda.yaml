@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  srl:
+    image: sapienzanlp/usea-srl:1.0.3-span-cuda
+    restart: always
+    ports:
+      - "${SRL_PORT}:80"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]

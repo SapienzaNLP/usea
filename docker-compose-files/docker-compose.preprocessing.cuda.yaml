@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  preprocessing:
+    image: sapienzanlp/usea-preprocessing:1.0.0-cuda
+    restart: always
+    ports:
+      - "${PREPROCESSING_PORT}:80"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]

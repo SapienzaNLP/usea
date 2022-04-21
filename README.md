@@ -100,7 +100,7 @@ If you want to use the GPU, you can use one (or more) configuration files inside
 docker-compose -f docker-compose.yaml -f docker-compose-files/docker-compose.amr.cuda.yaml up -d
 ```
 
-You can read [here](https://docs.docker.com/compose/extends/) for more information about using multiple configutation file.
+You can read [here](https://docs.docker.com/compose/extends/) for more information about using multiple configutation files.
 
 #### Without Docker Compose
 

@@ -1,9 +1,32 @@
+<div align="center">    
+ 
 <h1 align ="center"> Universal Semantic Annotator (USeA) </h1>
+
+[![Paper](http://img.shields.io/badge/paper-ACL--anthology-B31B1B.svg)]()
+[![Conference](http://img.shields.io/badge/conference-LREC--2022-4b44ce.svg)](https://lrec2022.lrec-conf.org/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+</div>
 
 This is the official repository for the paper [Universal Semantic Annotator: the First Unified API for WSD, SRL
 and Semantic Parsing](), which will be presented at LREC 2022 by [Riccardo Orlando](https://riccorl.github.io), 
 [Simone Conia](https://c-simone.github.io/), [Stefano Faralli](),
 and [Roberto Navigli](https://www.diag.uniroma1.it/navigli/).
+
+## Cite this work
+If you use USeA or any part of this work, please consider citing the paper as follows:
+
+```
+@inproceedings{orlando-etal-2022-usea,
+    title      = "{U}niversal {S}emantic {A}nnotator: the First Unified {API} for {WSD}, {SRL} and {S}emantic {P}arsing",
+    author     = "Orlando, Riccardo and Conia, Simone and Faralli, Stefano and Navigli, Roberto",
+    booktitle  = "Proceedings of the 13th Language Resources and Evaluation Conference (LREC 2022)",
+    month      = june,
+    year       = "2022",
+    address    = "Marseille, France",
+    publisher  = "European Language Resources Association"
+}
+```
 
 ## Abstract
 

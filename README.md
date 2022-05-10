@@ -63,8 +63,7 @@ This repo is for the Docker image of the USeA service proxy. This image takes ca
 2. Sending task-specific requests to task-specific endpoints (preprocessing, WSD, SRL, AMR parsing);
 3. Processing and merging the results from the task-specific endpoints;
 4. Returning all the annotations.
-**NOTE:** This image does not perform any preprocessing or annotation. For these tasks, please refer to 
-5. `usea-preprocessing`, `usea-wsd`, `usea-srl`, and `usea-amr` (soon to be released).
+**NOTE:** This image does not perform any preprocessing or annotation. For these tasks, please refer to `usea-preprocessing`, `usea-wsd`, `usea-srl`, and `usea-amr` (soon to be released).
 
 #### How to start a `usea-service` container
 
@@ -133,7 +132,7 @@ docker rm usea-service
 
 ##### Using Docker Compose
 
-USeA can be started using [Docker Compose](https://docs.docker.com/compose) by simply runing the following command:
+USeA can be started using [Docker Compose](https://docs.docker.com/compose) by simply running the following command:
 
 ```bash
 docker-compose up -d
@@ -149,7 +148,7 @@ If you want to use the GPU, you can use one (or more) configuration files inside
 docker-compose -f docker-compose.yaml -f docker-compose-files/docker-compose.amr.cuda.yaml up -d
 ```
 
-You can read [here](https://docs.docker.com/compose/extends/) for more information about using multiple configutation files.
+You can read [here](https://docs.docker.com/compose/extends/) for more information about using multiple configuration files.
 
 ##### Without Docker Compose
 

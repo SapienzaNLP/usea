@@ -1,6 +1,7 @@
-<div align="center">    
- 
-<h1 align ="center"> Universal Semantic Annotator (USeA) </h1>
+<div align="center">
+<h1 align ="center">
+Universal Semantic Annotator (USeA)
+</h1>
 
 [![Paper](http://img.shields.io/badge/paper-ACL--anthology-B31B1B.svg)]()
 [![Conference](http://img.shields.io/badge/conference-LREC--2022-4b44ce.svg)](https://lrec2022.lrec-conf.org/)
@@ -9,14 +10,15 @@
 </div>
 
 This is the official repository for the paper [Universal Semantic Annotator: the First Unified API for WSD, SRL
-and Semantic Parsing](), which will be presented at LREC 2022 by [Riccardo Orlando](https://riccorl.github.io), 
+and Semantic Parsing](), which will be presented at LREC 2022 by [Riccardo Orlando](https://riccorl.github.io),
 [Simone Conia](https://c-simone.github.io/), [Stefano Faralli](),
 and [Roberto Navigli](https://www.diag.uniroma1.it/navigli/).
 
 ## Cite this work
+
 If you use USeA or any part of this work, please consider citing the paper as follows:
 
-```
+```bibtex
 @inproceedings{orlando-etal-2022-usea,
     title      = "{U}niversal {S}emantic {A}nnotator: the First Unified {API} for {WSD}, {SRL} and {S}emantic {P}arsing",
     author     = "Orlando, Riccardo and Conia, Simone and Faralli, Stefano and Navigli, Roberto",
@@ -42,7 +44,7 @@ Universal Semantic Annotator (USeA) is the **first unified API for three primary
 Understanding (NLU)**:
 
 * **Word Sense Disambiguation (WSD):** the task of assigning the most appropriate sense to a word in context;
-* **Semantic Role Labeling (SRL):** the task of extracting the predicate-argument structures within a 
+* **Semantic Role Labeling (SRL):** the task of extracting the predicate-argument structures within a
 sentence;
 * **Semantic Parsing (Abstract Meaning Representation, AMR):** the task of representing a text in a structured
 semantic graph.
@@ -65,7 +67,9 @@ This repo is for the Docker image of the USeA service proxy. This image takes ca
 4. Returning all the annotations.
 **NOTE:** This image does not perform any preprocessing or annotation. For these tasks, please refer to `usea-preprocessing`, `usea-wsd`, `usea-srl`, and `usea-amr` (soon to be released).
 
-#### How to start a `usea-service` container
+## How to use
+
+### How to start a `usea-service` container
 
 Make sure you have installed [docker](https://docs.docker.com/get-docker/) before proceeding, then run the
 following command:
@@ -89,12 +93,12 @@ import json
 
 text = "La volpe veloce salta sopra il cane pigro."
 response = requests.post(
-    "http://localhost:8000/process", json={"type": "text", "content": text}
+    "http://localhost:22000/process", json={"type": "text", "content": text}
 )
 print(json.dumps(response.json(), indent=2))
 ```
 
-##### Specifying your own endpoints
+#### Specifying your own endpoints
 
 By default, the proxy image sends the requests to our online servers.
 You can specify the URL of the preprocessing, WSD, SRL and AMR parsing enpoints to point to your own (local) instances, as follows:
@@ -106,7 +110,7 @@ WSD_ENDPOINT="$BASE_HOST"/wsd
 SRL_ENDPOINT="$BASE_HOST"/srl
 AMR_ENDPOINT="$BASE_HOST"/amr
 
-docker run --name usea-service -p 8000:8000 usea-service \
+docker run --name usea-service -p 22000:8000 usea-service \
     -e PREPROCESSING_ENDPOINT=$PREPROCESSING_ENDPOINT \
     -e WSD_ENDPOINT=$WSD_ENDPOINT \
     -e SRL_ENDPOINT=$SRL_ENDPOINT \
@@ -128,9 +132,9 @@ docker stop usea-service
 docker rm usea-service
 ```
 
-#### Deploy USeA locally
+### Deploy USeA locally
 
-##### Using Docker Compose
+#### Using Docker Compose
 
 USeA can be started using [Docker Compose](https://docs.docker.com/compose) by simply running the following command:
 
@@ -138,9 +142,9 @@ USeA can be started using [Docker Compose](https://docs.docker.com/compose) by s
 docker-compose up -d
 ```
 
-It will be available at `localhost:22000/process`. By default, it will run the CPU version of the images.
+It will be available at `localhost:22000/process`. By default, it will run the CPU version of the images. Ports and individual module endpoints can be changed using the `.env` file.
 
-###### GPU Support
+##### GPU Support
 
 If you want to use the GPU, you can use one (or more) configuration files inside `docker-compose-files` folder. Let's say, for example, we want to deploy USeA with GPU support for `usea-amr`. What you have to do is running the following command:
 
@@ -150,7 +154,7 @@ docker-compose -f docker-compose.yaml -f docker-compose-files/docker-compose.amr
 
 You can read [here](https://docs.docker.com/compose/extends/) for more information about using multiple configuration files.
 
-##### Without Docker Compose
+#### Without Docker Compose
 
 If you don't want to use Docker Compose, you can manually pull the images from our [Docker Hub](https://hub.docker.com/repository/docker/sapienzanlp), and run them as usual.
 

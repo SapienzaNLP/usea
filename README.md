@@ -156,7 +156,7 @@ You can read [here](https://docs.docker.com/compose/extends/) for more informati
 
 #### Without Docker Compose
 
-If you don't want to use Docker Compose, you can manually pull the images from our [Docker Hub](https://hub.docker.com/repository/docker/sapienzanlp), and run them as usual.
+If you don't want to use Docker Compose, you can manually pull the images from our [Docker Hub](https://hub.docker.com/u/sapienzanlp), and run them as usual.
 
 ## Acknowledgements
 

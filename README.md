@@ -10,8 +10,8 @@ Universal Semantic Annotator (USeA)
 </div>
 
 This is the official repository for the paper [Universal Semantic Annotator: the First Unified API for WSD, SRL
-and Semantic Parsing](), which will be presented at LREC 2022 by [Riccardo Orlando](https://riccorl.github.io),
-[Simone Conia](https://c-simone.github.io/), [Stefano Faralli](),
+and Semantic Parsing](https://www.researchgate.net/publication/360671045_Universal_Semantic_Annotator_the_First_Unified_API_for_WSD_SRL_and_Semantic_Parsing), which will be presented at LREC 2022 by [Riccardo Orlando](https://riccorl.github.io),
+[Simone Conia](https://c-simone.github.io/), [Stefano Faralli](https://corsidilaurea.uniroma1.it/it/users/stefanofaralliuniroma1it),
 and [Roberto Navigli](https://www.diag.uniroma1.it/navigli/).
 
 ## Cite this work
@@ -38,6 +38,8 @@ Disambiguation, Semantic Role Labeling and Semantic Parsing. Together, such anno
 users with rich and diverse semantic information, help second-language learners, and allow researchers to
 integrate explicit semantic knowledge into downstream tasks and real-world applications.
 
+<img src="docs/LREC%202022%20-%20USeA%20-%20github.png" width="100%" alt="usea picture" style="display: block; margin: 0 auto" />
+
 ## Description
 
 Universal Semantic Annotator (USeA) is the **first unified API for three primary tasks in Natural Language
@@ -56,6 +58,9 @@ state-of-the-art systems that would otherwise require expert knowledge of the fi
 and implementation, and last but not least iv) fostering further research in NLU and other fields on the
 interplay between semantics and other modalities, e.g., computer vision, speech recognition,
 video understanding.
+
+<img src="docs/LREC%202022%20-%20USeA%20-%20github%202.png" width="50%" alt="usea modules" style="display: block; margin: 0 auto" />
+
 
 ### Image Description
 

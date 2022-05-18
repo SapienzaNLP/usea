@@ -59,8 +59,9 @@ and implementation, and last but not least iv) fostering further research in NLU
 interplay between semantics and other modalities, e.g., computer vision, speech recognition,
 video understanding.
 
+<div align="center">
 <img src="docs/LREC%202022%20-%20USeA%20-%20github%202.png" width="50%" alt="usea modules" style="display: block; margin: 0 auto" />
-
+</div>
 
 ### Image Description
 

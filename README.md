@@ -81,7 +81,7 @@ Make sure you have installed [docker](https://docs.docker.com/get-docker/) befor
 following command:
 
 ```bash
-docker run --name sapienzanlp/usea-service:1.0.2 -p 22000:8000 usea-service
+docker run --name usea-service -p 22000:8000 sapienzanlp/usea-service:1.0.2
 ```
 
 If you want to run the container in the background, simply use the flag `-d` as follows:
@@ -116,7 +116,7 @@ WSD_ENDPOINT="$BASE_HOST"/wsd
 SRL_ENDPOINT="$BASE_HOST"/srl
 AMR_ENDPOINT="$BASE_HOST"/amr
 
-docker run --name usea-service -p 22000:8000 usea-service \
+docker run --name usea-service -p 22000:8000 sapienzanlp/usea-service:1.0.2 \
     -e PREPROCESSING_ENDPOINT=$PREPROCESSING_ENDPOINT \
     -e WSD_ENDPOINT=$WSD_ENDPOINT \
     -e SRL_ENDPOINT=$SRL_ENDPOINT \

@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   orchestrator:
-    image: sapienzanlp/usea-service:1.0.2
+    image: sapienzanlp/usea-service
     ports:
       - "${ORCHESTRATOR_PORT}:8000"
     restart: always

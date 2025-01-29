@@ -71,7 +71,7 @@ This repo is for the Docker image of the USeA service proxy. This image takes ca
 2. Sending task-specific requests to task-specific endpoints (preprocessing, WSD, SRL, AMR parsing);
 3. Processing and merging the results from the task-specific endpoints;
 4. Returning all the annotations.
-**NOTE:** This image does not perform any preprocessing or annotation. For these tasks, please refer to `usea-preprocessing`, `usea-wsd`, `usea-srl`, and `usea-amr` (soon to be released).
+**NOTE:** This image does not perform any preprocessing or annotation. For these tasks, please refer to `usea-preprocessing`, `usea-wsd`, `usea-srl`, and `usea-amr`.
 
 ## How to use
 
